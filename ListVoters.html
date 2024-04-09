@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Decentralized Voting System</title>
+	<link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class = "navbar">
+        <a href="/">Vote</a>
+        <a href="/ListVoters.html">List the Voters</a>
+    </div>
+
+    
+
+    <div>
+        <button onclick="connectMetamask()">Connect to Metamask Wallet</button>
+        <p id="metamasknotification"></p>
+    </div>
+
+    <div class="container">
+		<form method="POST" action="/addCandidate" enctype="multipart/form-data">
+			<span>Add candidate</span>
+			<input type="text" id="candidate" name="candidate" placeholder="Add name of the Candidates ">
+			<input type="submit" onclick="test()" value="Add Candidate">
+		</form>
+    </div>
+        
+    <div>
+		<p id="votingstatus"></p>
+    </div>
+
+    <div>
+        <button onclick="getAllCandidates()">List All Candidates</button>
+        <p id="p3"></p>
+    </div>
+
+    <div>
+        <table id="myTable">
+			<thead>
+				<tr>
+                    <th>Index</th>
+                    <th>Candidate Name</th>
+                    <th>Candidate Votes</th>
+                </tr>
+            </thead>
+    </div>
+
+	<script src="main.js"></script>
+	<script src="https://cdn.ethers.io/lib/ethers-5.7.1.umd.min.js"
+		type="application/javascript"></script>
+</body>
+</html>
